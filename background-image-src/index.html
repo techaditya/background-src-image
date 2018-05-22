@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Set Background Image to Div using an Image Source Link</title>
+	<link rel="stylesheet" href="styles.css" />
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+
+
+<div class="bodyContainerWrapper">
+	<div class="bodyContainer">
+		<div class="padding">
+			<div class="backgroundDiv">
+				<span>This is just an empty div where the image link should be as background image in this container.</span>
+			</div>
+
+
+
+			<h2>The Div with the Image</h2>
+			<div class="imageDiv">
+				<img src="sunset.jpg" alt="" width="" height="" />
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+// store the image link inside a variable from 'src' attribute
+var getImageSrc = $('.imageDiv img').attr('src');
+
+// add div background image using the variable above
+$('.backgroundDiv').css('background-image', 'url(' + getImageSrc + ')');
+
+// Uncomment if you want to remove the div with the image (hide it from CSS also)
+// $('.imageDiv').remove();
+</script>
+
+
+</body>
+</html>
